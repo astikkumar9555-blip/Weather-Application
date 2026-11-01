@@ -13,8 +13,10 @@ button.addEventListener("click",async ()=>{
  const value =input.value;
  const result = await getdata(value);
  console.log(result);
- const Location = result.location.name;
- cityName.innerText = Location;
+  cityName.innerText = `${result.location.name},${result.location.region} - ${result.location.country}`
+ cityTime.innerText = result.location.localtime;
+ cityTemp.innerText = result.current.temp_c +' degree Celcis';
+
 });
 
 
