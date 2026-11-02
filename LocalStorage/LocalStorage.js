@@ -7,10 +7,11 @@ button.addEventListener('click',()=>{
    const ValueName = Input.value;
     userName.innerHTML= "Hey, My name is :" +ValueName;
     localStorage.setItem("Name",ValueName);
+    //   location.reload();
 });
 
  window.addEventListener('load',()=>{
   const value = localStorage.getItem("Name");
-  console.log(value);
-   userName.innerHTML= "Hey, My name is :" + value;
+ userName.innerHTML= "Hey, My name is :" +value;
+    
  });
